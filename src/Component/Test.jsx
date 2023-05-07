@@ -1,8 +1,7 @@
-import img from "../assets/punch.png"
 import { useState } from "react";
+import img from "../assets/punch.png";
 
-const Nav = () => {
-
+const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,10 +11,10 @@ const Nav = () => {
   return (
     <nav className="">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-4 items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <h2 className=" text-[#FFFBF5]">Anime</h2>
-            <img src={img} className="md:w-[40px] w-[30px]"  alt="punch" />
+            <img src={img} className="w-[40px]" alt="punch" />
           </div>
 
           <div className=" items-center gap-5 hidden md:flex">
@@ -31,7 +30,7 @@ const Nav = () => {
             <div className="relative flex w-full flex-wrap items-stretch">
               <input
                 type="search"
-                className="relative m-0 block md:w-[30%] w-[150px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-white outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-white focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                className="relative m-0 block w-[30%] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-white outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-white focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                 placeholder="Search"
               />
 
@@ -124,5 +123,4 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;
+export default MobileMenu;
